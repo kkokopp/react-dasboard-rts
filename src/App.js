@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import './styles/styles.css';
-import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Auth/Login';
 import Dashboard from './components/Dashboard/admin/dashboard';
 import Layout from './components/container/Layout';
