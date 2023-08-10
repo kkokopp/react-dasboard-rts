@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8ac90cf.css",
-    "main.js": "/static/js/main.7036ea14.js",
-    "static/js/787.38f8399e.chunk.js": "/static/js/787.38f8399e.chunk.js",
-    "static/media/profile.jpg": "/static/media/profile.fba69cdd1decb7f4c0ba.jpg",
-    "index.html": "/index.html",
-    "main.a8ac90cf.css.map": "/static/css/main.a8ac90cf.css.map",
-    "main.7036ea14.js.map": "/static/js/main.7036ea14.js.map",
-    "787.38f8399e.chunk.js.map": "/static/js/787.38f8399e.chunk.js.map"
+    "main.css": "/react-dasboard-rts/static/css/main.a8ac90cf.css",
+    "main.js": "/react-dasboard-rts/static/js/main.bf57053e.js",
+    "static/js/787.38f8399e.chunk.js": "/react-dasboard-rts/static/js/787.38f8399e.chunk.js",
+    "static/media/profile.jpg": "/react-dasboard-rts/static/media/profile.fba69cdd1decb7f4c0ba.jpg",
+    "index.html": "/react-dasboard-rts/index.html",
+    "main.a8ac90cf.css.map": "/react-dasboard-rts/static/css/main.a8ac90cf.css.map",
+    "main.bf57053e.js.map": "/react-dasboard-rts/static/js/main.bf57053e.js.map",
+    "787.38f8399e.chunk.js.map": "/react-dasboard-rts/static/js/787.38f8399e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8ac90cf.css",
-    "static/js/main.7036ea14.js"
+    "static/js/main.bf57053e.js"
   ]
 }
