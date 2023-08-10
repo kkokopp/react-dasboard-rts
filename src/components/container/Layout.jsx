@@ -2,6 +2,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import Sidebar from "./sidebar";
 import Navigation from "./navigation";
+import { Outlet } from "react-router-dom";
 
 function Layout({children}){
     const [sidebarOpen, setSidebarOpen] = React.useState(false);
@@ -22,7 +23,7 @@ function Layout({children}){
             {/* <!-- Main content area --> */}
             <div className="content bg-white h-screen rounded-lg shadow-sm" id="mainContent">
                 {/* <!-- Content from links will be dynamically loaded here --> */}
-                {children}
+                <Outlet />
             </div>
         </div>
     </div>
