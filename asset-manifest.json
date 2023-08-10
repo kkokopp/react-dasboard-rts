@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kkokopp/react-dasboard-rts/static/css/main.a8ac90cf.css",
-    "main.js": "/kkokopp/react-dasboard-rts/static/js/main.ff5bade2.js",
-    "static/js/787.38f8399e.chunk.js": "/kkokopp/react-dasboard-rts/static/js/787.38f8399e.chunk.js",
-    "static/media/profile.jpg": "/kkokopp/react-dasboard-rts/static/media/profile.fba69cdd1decb7f4c0ba.jpg",
-    "index.html": "/kkokopp/react-dasboard-rts/index.html",
-    "main.a8ac90cf.css.map": "/kkokopp/react-dasboard-rts/static/css/main.a8ac90cf.css.map",
-    "main.ff5bade2.js.map": "/kkokopp/react-dasboard-rts/static/js/main.ff5bade2.js.map",
-    "787.38f8399e.chunk.js.map": "/kkokopp/react-dasboard-rts/static/js/787.38f8399e.chunk.js.map"
+    "main.css": "/react-dasboard-rts/static/css/main.a8ac90cf.css",
+    "main.js": "/react-dasboard-rts/static/js/main.7ac0b1ab.js",
+    "static/js/787.38f8399e.chunk.js": "/react-dasboard-rts/static/js/787.38f8399e.chunk.js",
+    "static/media/profile.jpg": "/react-dasboard-rts/static/media/profile.fba69cdd1decb7f4c0ba.jpg",
+    "index.html": "/react-dasboard-rts/index.html",
+    "main.a8ac90cf.css.map": "/react-dasboard-rts/static/css/main.a8ac90cf.css.map",
+    "main.7ac0b1ab.js.map": "/react-dasboard-rts/static/js/main.7ac0b1ab.js.map",
+    "787.38f8399e.chunk.js.map": "/react-dasboard-rts/static/js/787.38f8399e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8ac90cf.css",
-    "static/js/main.ff5bade2.js"
+    "static/js/main.7ac0b1ab.js"
   ]
 }
