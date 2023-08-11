@@ -1,8 +1,16 @@
 # Aplikasi RTS
 ### login dashboard
-username : admin
-password : admin
-role     : Admin
+<ul>
+    <li>
+    username : admin
+    </li>
+    <li>
+    password : admin
+    </li>
+    <li>
+    role     : Admin
+    </li>
+</ul>
 
 # Getting Started with Create React App
 
