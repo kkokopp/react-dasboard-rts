@@ -1,6 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import imageSrc from "../../assets/images/profile.jpg";
+import imageSrc from "../../assets/images/nurse.jpg";
+
 
 function Navigation({toggleSidebar, sidebarOpen}){
     const [searchOpen, setSearchOpen] = React.useState(false);  
@@ -23,15 +24,15 @@ function Navigation({toggleSidebar, sidebarOpen}){
                 </svg>                  
                 )}
             </button>
-            <div id="search-div" className={`flex-col sm:flex transition-semua ${searchOpen ? 'w-full':'hidden w-1/2'} `}>
+            <div id="search-div" className={`flex-col w-full md:w-1/2 sm:flex transition-semua ${searchOpen ? '':'hidden'}`}>
                 <form>   
-                    <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                    <div className="relative">
-                        <input type="search" id="default-search" className="block p-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required></input>
-                        <button type="submit" className="text-white absolute rightt toppp bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                                </svg>
+                    {/* <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label> */}
+                    <div className="flex">
+                        <input type="search" id="default-search" className="block p-2 w-full text-sm border border-gray-300 rounded-s-md bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required></input>
+                        <button type="submit" className="text-white items-center rightt toppp  focus:ring-4 focus:outline-none active:ring-0 active:outline-none active:border-0 p-2 bg-blue-700 rounded-e-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
                         </button>
                     </div>
                 </form>
@@ -52,7 +53,7 @@ function Navigation({toggleSidebar, sidebarOpen}){
                     }
                 </button>
             </div>
-            <div id="notif-profile" className={`flex flex-row flex-grow justify-end items-center ${searchOpen ? 'hidden':''} `}>
+            <div id="notif-profile" className={`flex md:flex flex-row flex-grow justify-end items-center ${searchOpen ? 'hidden':''} `}>
                 <div className="flex pr-4">
                     <button className="rounded-full active:bg-blue-200">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">

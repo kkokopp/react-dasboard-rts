@@ -68,8 +68,8 @@
     @apply bg-blue-400;
 }
 
-.active-blue {
-    @apply bg-blue-400;
+.active-link {
+    @apply bg-gray-100;
 }
 
 @media(max-width: 768px){
@@ -78,15 +78,19 @@
     }
 
     .dropdown-sidebar{
-        @apply -translate-y-10;
-        @apply left-20; 
-        @apply py-2;
         @apply space-y-2;
+        @apply fixed;
+        left: 100px;
+        @apply py-2;
+        @apply -translate-y-10;
         @apply bg-gray-50;
         @apply divide-y;
         @apply divide-gray-100;
         @apply rounded-lg;
         @apply shadow w-44;
+        @apply border-gray-300;
+        @apply border-2;
+        @apply border-opacity-60;
     }
 
     .sidebar-md{

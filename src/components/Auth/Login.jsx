@@ -23,7 +23,7 @@ function Login() {
     };
 
     return (
-        <div className="h-full w-full bg-neutral-200 dark:bg-neutral-700">
+        <div className="h-full w-full bg-neutral-200 dark:bg-neutral-700 rounded-lg">
         <div className="flex flex-grow h-screen w-screen p-5 lg:px-40 xl:px-40">
           <div className="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
             <div className="w-full">
