@@ -56,34 +56,7 @@ function Sidebar({sidebarOpen}){
                         </li>
                         
                         {dropdowns.map((dropdown, index) => (
-                            <li className="py-2 sidebar-li sub-items relative" key={index}>
-                                <button type="button" className={`dropdown-toggle flex items-center justify-center w-full p-2 text-base text-gray-900 transition duration-300 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${isDropdownActive(dropdown.content.map(item => item.link))}`} 
-                                aria-controls="master-data" 
-                                data-target="master-data"
-                                data-dropdown-placement="right-end" 
-                                onClick={()=> toggleDropdown(index)}>
-                                <svg className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d={dropdown.icon}/>
-                                </svg>
-                                    <span className="flex-1 ml-3 text-left whitespace-nowrap hidden md:block opacity-transition">{dropdown.label}</span>
-                                    <svg className="w-3 h-3 hidden md:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-                                    </svg>
-
-                                </button>
-                                    {dropdownOpen[index] && 
-                                        <ul id="master-data" className="translate-x-0 lg:static dropdown-sidebar transition-all duration-1000 ease-in-out">
-                                            {dropdown.content.map((item, itemIndex) => (
-                                                <li key={itemIndex}>
-                                                    <Link to={item.link} className="flex text-sm items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{item.page}</Link>
-                                                </li>
-                                            ))}
-                                            {/* <li>
-                                                <Link to={dropdown.content[2].link} className="flex text-sm items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{dropdown.content[2].page}</Link>
-                                            </li> */}
-                                        </ul>    
-                                    }
-                            </li>
+                            <DropdownItem key={index} dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} isDropdownActive={isDropdownActive} dropdown = {dropdown}index = {index}></DropdownItem>
                         ))}
                         <li className="py-2">
                             <Link to="/" className="sidebar-link justify-center flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -106,6 +79,36 @@ function Sidebar({sidebarOpen}){
                 </div>
             </aside>
         </div>
+    );
+}
+
+function DropdownItem({dropdownOpen, toggleDropdown, isDropdownActive, dropdown, index}){
+    return(
+        <li className="py-2 sidebar-li sub-items relative" key={index}>
+        <button type="button" className={`dropdown-toggle flex items-center justify-center w-full p-2 text-base text-gray-900 transition duration-300 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${isDropdownActive(dropdown.content.map(item => item.link))}`} 
+        aria-controls="master-data" 
+        data-target="master-data"
+        data-dropdown-placement="right-end" 
+        onClick={()=> toggleDropdown(index)}>
+        <svg className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" >
+            <path strokeLinecap="round" strokeLinejoin="round" d={dropdown.icon}/>
+        </svg>
+            <span className="flex-1 ml-3 text-left whitespace-nowrap hidden md:block opacity-transition">{dropdown.label}</span>
+            <svg className="w-3 h-3 hidden md:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+            </svg>
+
+        </button>
+            {dropdownOpen[index] && 
+                <ul id="master-data" className="translate-x-0 lg:static dropdown-sidebar transition-all duration-1000 ease-in-out">
+                    {dropdown.content.map((item, itemIndex) => (
+                        <li key={itemIndex}>
+                            <Link to={item.link} className="flex text-sm items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{item.page}</Link>
+                        </li>
+                    ))}
+                </ul>    
+            }
+    </li>
     );
 }
 

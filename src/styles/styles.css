@@ -1649,6 +1649,10 @@ input:checked + .toggle-bg {
   width: 100vw;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -2294,6 +2298,11 @@ input:checked + .toggle-bg {
   border-color: rgb(159 88 10 / var(--tw-border-opacity));
 }
 
+.border-blue-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(26 86 219 / var(--tw-border-opacity));
+}
+
 .bg-cyan-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(207 250 254 / var(--tw-bg-opacity));
@@ -2882,6 +2891,11 @@ input:checked + .toggle-bg {
 .py-\[0\.32rem\] {
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .pb-1 {

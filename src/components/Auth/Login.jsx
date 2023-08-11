@@ -93,7 +93,7 @@ function Login() {
                           <div className="relative mb-4 focus:border-blue-900">
                               <select data-te-select-init className="rounded-lg w-full"
                               onChange={(e) => setRole(e.target.value)}>
-                                <option value="" disabled>Select a role...</option>
+                                <option value="">Pilih akun..</option>
                                 <option value="1">Admin</option>
                                 <option value="2">Perawat</option>
                                 </select>

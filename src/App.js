@@ -9,6 +9,7 @@ import Layout from './components/container/Layout';
 import Register from './components/Auth/Register';
 import Perawat from './components/Dashboard/admin/perawat';
 import Pasien from './components/Dashboard/admin/pasien';
+import Detailperawat from './components/Dashboard/admin/detailperawat';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} /> 
           <Route path="perawat" element={<Perawat />} /> 
+          <Route path="perawat/detail/" element={<Detailperawat />} /> 
           <Route path="pasien" element={<Pasien />} />
           <Route path="gcs" element={<Pasien />} />
           <Route path="rts" element={<Pasien />} />
