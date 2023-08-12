@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-dasboard-rts/static/css/main.4f70dfe6.css",
-    "main.js": "/react-dasboard-rts/static/js/main.91445d94.js",
+    "main.css": "/react-dasboard-rts/static/css/main.44519c46.css",
+    "main.js": "/react-dasboard-rts/static/js/main.067e7f3a.js",
     "static/js/787.38f8399e.chunk.js": "/react-dasboard-rts/static/js/787.38f8399e.chunk.js",
-    "static/media/nurse.jpg": "/react-dasboard-rts/static/media/nurse.9878d2a2dfff6b3e4c05.jpg",
+    "static/media/nurse.jpg": "/react-dasboard-rts/static/media/nurse.1b5edbca83323ec57797.jpg",
     "index.html": "/react-dasboard-rts/index.html",
-    "main.4f70dfe6.css.map": "/react-dasboard-rts/static/css/main.4f70dfe6.css.map",
-    "main.91445d94.js.map": "/react-dasboard-rts/static/js/main.91445d94.js.map",
+    "main.44519c46.css.map": "/react-dasboard-rts/static/css/main.44519c46.css.map",
+    "main.067e7f3a.js.map": "/react-dasboard-rts/static/js/main.067e7f3a.js.map",
     "787.38f8399e.chunk.js.map": "/react-dasboard-rts/static/js/787.38f8399e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f70dfe6.css",
-    "static/js/main.91445d94.js"
+    "static/css/main.44519c46.css",
+    "static/js/main.067e7f3a.js"
   ]
 }
