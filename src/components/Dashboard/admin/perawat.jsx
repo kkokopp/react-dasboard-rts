@@ -3,16 +3,57 @@ import React from "react";
 // import imageSrc from "../../../assets/images/profile.jpg";
 import imageSrc from "../../../assets/images/nurse.jpg";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { ref, onValue, set, get } from "firebase/database";
+import {db} from "../../../config/firebase";
 
-function Perawat(){
+const Perawat = () =>{
 
-    const perawat = [
-        {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
-        {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
-        {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
-        {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
-        {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
-    ];
+    const [perawat, setPerawat] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [filteredPerawat, setFilteredPerawat] = useState([]);
+
+    useEffect(() => {
+        const perawatRef = ref(db, "perawat");
+
+        const fetchPerawat = async () => {
+            try {
+              const snapshot = await get(perawatRef);
+              if (snapshot.exists()) {
+                const data = snapshot.val();
+                const perawatList = Object.values(data);
+                setPerawat(perawatList);
+                // console.log(perawatList);
+              }
+            } catch (error) {
+              console.error("Error fetching nurses:", error);
+            }
+          };
+      
+          fetchPerawat();
+    }, []);
+
+    useEffect(() => {
+        if(searchTerm === ''){
+            setFilteredPerawat(perawat);
+            return;
+        }else{
+            const filteredPerawat = perawat.filter((perawat) =>{
+                return perawat.nama.toLowerCase().includes(searchTerm.toLowerCase())
+            });
+            setFilteredPerawat(filteredPerawat);
+            // console.log(filteredPerawat)
+        }
+    }, [searchTerm, perawat]);
+
+
+    // const perawat = [
+    //     {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
+    //     {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
+    //     {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
+    //     {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
+    //     {foto: imageSrc, nama: "Nurmaya Santika", jenisKelamin: "P", umur: 20, lamaBekerja: "1 Tahun", pendidikan: "S1 Keperawatan"},
+    // ];
     const navigate = useNavigate();
 
     return(
@@ -56,7 +97,9 @@ function Perawat(){
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                                 </svg>
                             </div>
-                            <input type="text" id="table-search-users" className="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for users"></input>
+                            <input type="text" id="table-search-users" className="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for users"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}></input>
                         </div>
                     </div>
                     
@@ -85,15 +128,18 @@ function Perawat(){
                                     <th scope="col" className="px-6 py-3">
                                         Pendidikan
                                     </th>
+                                    <th scope="col" className="px-6 py-3">
+   
+                                    </th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                {perawat.map((item, index) => (                                    
+                                {filteredPerawat.map((item, index) => (                                    
                                     <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"  key={index}>
                                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{index + 1}</th>
                                         <td className="px-6 py-4">
-                                            <img src={item.foto} alt="foto" className=" h-auto  max-h-16"/>
+                                            <img src={imageSrc} alt="foto" className=" h-auto  max-h-16"/>
                                         </td>
                                         <td className="px-6 py-4">{item.nama}</td>
                                         <td className="px-6 py-4">{item.jenisKelamin}</td>

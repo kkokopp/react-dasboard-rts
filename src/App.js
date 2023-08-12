@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import './styles/styles.css';
 import { BrowserRouter as Router, Route, Routes, BrowserRouter, HashRouter } from 'react-router-dom';
+import 'firebase/database';
 import Login from './components/Auth/Login';
 import Dashboard from './components/Dashboard/admin/dashboard';
 import Layout from './components/container/Layout';
@@ -10,6 +11,7 @@ import Register from './components/Auth/Register';
 import Perawat from './components/Dashboard/admin/perawat';
 import Pasien from './components/Dashboard/admin/pasien';
 import Detailperawat from './components/Dashboard/admin/detailperawat';
+import {db} from './config/firebase';
 
 function App() {
   return (
