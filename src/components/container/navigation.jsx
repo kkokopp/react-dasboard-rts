@@ -28,7 +28,7 @@ function Navigation({toggleSidebar, sidebarOpen}){
                 <form>   
                     {/* <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label> */}
                     <div className="flex">
-                        <input type="search" id="default-search" className="block p-2 w-full text-sm border border-gray-300 rounded-s-md bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required></input>
+                        <input type="search" id="default-search" className="block p-2 w-full text-sm border border-blue-400 rounded-s-md bg-blue-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required></input>
                         <button type="submit" className="text-white items-center rightt toppp  focus:ring-4 focus:outline-none active:ring-0 active:outline-none active:border-0 p-2 bg-blue-700 rounded-e-md">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-5 h-5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />

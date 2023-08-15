@@ -5,11 +5,14 @@ import App from './App';
 import './styles/styles.css';
 import reportWebVitals from './reportWebVitals';
 import 'flowbite';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </React.StrictMode>
 );
 

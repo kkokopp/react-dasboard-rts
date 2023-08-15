@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 
@@ -19,7 +19,6 @@ function Sidebar({sidebarOpen}){
         return paths.some(path => location.pathname.startsWith(path)) ? 'active-link' : '';
       };
     
-
       const dropdowns = [
     { label: "Master Data", 
     content:[
@@ -36,17 +35,17 @@ function Sidebar({sidebarOpen}){
   ];
 
     return(
-        <div id="sidebarContainer" className={`transition-semua ${sidebarOpen ? "" : "sidebar-md"}`}>
-            <aside id="logo-sidebar" className="fixed py-4 pl-4 top-0 left-0 z-40 w-24 md:w-64 h-screen transition-semua" aria-label="logo-sidebar">
+        <aside id="sidebarContainer" className={`transition-semua ${sidebarOpen ? "" : "sidebar-md"}`}>
+            <div id="logo-sidebar" className="fixed py-4 pl-4 top-0 left-0 z-40 w-24 md:w-64 h-screen transition-semua" aria-label="logo-sidebar">
                 <div className="h-full px-3 py-4 overflow-y-auto rounded-lg bg-white shadow-sm dark:bg-gray-800">
                     <a href="https://flowbite.com/" className="flex justify-center mb-5 p-0 md:pl-2.5">
                         <img src="https://flowbite.com/docs/images/logo.svg" className=" md:pr-4" alt="Flowbite Logo" />
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white hidden md:block opacity-transition">Aplikasi RTS</span>
                     </a>
-                    <ul className="p-0 font-medium border-t border-gray-200 dark:border-gray-700">
+                    <ul className="p-0 font-medium border-t border-gray-200 dark:border-gray-700" >
                         <li className="py-2 sidebar-li">
-                            <Link to="/admin/dashboard" type="button" className={`flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ${isDropdownActive(['/admin/dashboard'])}`}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                            <Link to="/admin/dashboard" type="button" className={`flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 group ${isDropdownActive(['/admin/dashboard'])}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
                             </svg>
@@ -56,11 +55,11 @@ function Sidebar({sidebarOpen}){
                         </li>
                         
                         {dropdowns.map((dropdown, index) => (
-                            <DropdownItem key={index} dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} isDropdownActive={isDropdownActive} dropdown = {dropdown}index = {index}></DropdownItem>
+                            <DropdownItem key={index} setDropdownOpen={setDropdownOpen} dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} isDropdownActive={isDropdownActive} dropdown = {dropdown}index = {index}></DropdownItem>
                         ))}
                         <li className="py-2">
-                            <Link to="/" className="sidebar-link justify-center flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                            <Link to="/" className="sidebar-link justify-center flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blu-50 dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                             </svg>
                             <span className="flex-1 ml-3 whitespace-nowrap hidden md:block opacity-transition">Kuisoner Informasi</span>
@@ -68,7 +67,7 @@ function Sidebar({sidebarOpen}){
                         </li>
                         <li className="py-2">
                             <Link to="/" className="flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                             </svg>
 
@@ -77,15 +76,33 @@ function Sidebar({sidebarOpen}){
                         </li>
                     </ul>
                 </div>
-            </aside>
-        </div>
+            </div>
+        </aside>
     );
 }
 
-function DropdownItem({dropdownOpen, toggleDropdown, isDropdownActive, dropdown, index}){
+function DropdownItem({setDropdownOpen, dropdownOpen, toggleDropdown, isDropdownActive, dropdown, index}){
+    const dropdownRef = useRef(null); // Ref to the dropdown container
+
+    useEffect(() => {
+      const handleDocumentClick = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setDropdownOpen((prevOpenDropdowns) =>
+            prevOpenDropdowns.map((isOpen, i) => (i === index ? false : isOpen))
+          );
+        }
+      };
+  
+      document.addEventListener('click', handleDocumentClick);
+  
+      return () => {
+        document.removeEventListener('click', handleDocumentClick);
+      };
+    }, [index, setDropdownOpen]);
     return(
-        <li className="py-2 sidebar-li sub-items relative" key={index}>
-        <button type="button" className={`dropdown-toggle flex items-center justify-center w-full p-2 text-base text-gray-900 transition duration-300 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${isDropdownActive(dropdown.content.map(item => item.link))}`} 
+        <li className="py-2 sidebar-li sub-items relative" key={index}
+        ref={dropdownRef}>
+        <button type="button" className={`dropdown-toggle flex items-center justify-center w-full p-2 text-base text-gray-900 transition duration-300 rounded-lg group hover:bg-blue-50 dark:text-white dark:hover:bg-gray-700 ${isDropdownActive(dropdown.content.map(item => item.link))}`} 
         aria-controls="master-data" 
         data-target="master-data"
         data-dropdown-placement="right-end" 
@@ -103,7 +120,8 @@ function DropdownItem({dropdownOpen, toggleDropdown, isDropdownActive, dropdown,
                 <ul id="master-data" className="translate-x-0 lg:static dropdown-sidebar transition-all duration-1000 ease-in-out">
                     {dropdown.content.map((item, itemIndex) => (
                         <li key={itemIndex}>
-                            <Link to={item.link} className="flex text-sm items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{item.page}</Link>
+                            <Link to={item.link} className="flex text-sm items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-50 dark:text-white dark:hover:bg-gray-700"
+                            onClick={(e) => e.stopPropagation()}>{item.page}</Link>
                         </li>
                     ))}
                 </ul>    

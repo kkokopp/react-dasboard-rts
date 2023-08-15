@@ -69,7 +69,16 @@
 }
 
 .active-link {
-    @apply bg-gray-100;
+    @apply border-l-8;
+    @apply border-blue-600;
+    @apply bg-gradient-to-r;
+    @apply from-blue-100;
+    @apply to-white;
+    @apply text-black;
+}
+
+.active-link svg{
+    stroke: black;
 }
 
 @media(max-width: 768px){
