@@ -2,7 +2,7 @@
 
 ## link page
 https://kkokopp.github.com/react-dasboard-rts
-## login dashboard
+## login dashboard admin
 <ul>
     <li>
     username : admin
@@ -12,6 +12,20 @@ https://kkokopp.github.com/react-dasboard-rts
     </li>
     <li>
     role     : Admin
+    </li>
+</ul>
+
+
+## login dashboard perawat
+<ul>
+    <li>
+    username : perawat
+    </li>
+    <li>
+    password : perawat
+    </li>
+    <li>
+    role     : Perawat
     </li>
 </ul>
 
