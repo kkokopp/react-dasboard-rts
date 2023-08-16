@@ -1,6 +1,6 @@
 import React from "react";
 
-const GCS = () => {
+const Gcs = () => {
     const [eye, setEye] = React.useState("");
     const [verbal, setVerbal] = React.useState("");
     const [motor, setMotor] = React.useState("");
@@ -176,4 +176,4 @@ const GCS = () => {
     );
 };
 
-export default GCS;
+export default Gcs;

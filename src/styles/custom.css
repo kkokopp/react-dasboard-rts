@@ -12,6 +12,7 @@
     transitions: transform 0.2s ease-out;
 }
 
+
 .input-transformed:not(:placeholder-shown) + .label-transform,
 .input-transformed:focus + .label-transform {
     @apply bg-white; 
@@ -70,9 +71,9 @@
 
 .active-link {
     @apply border-l-8;
-    @apply border-blue-600;
+    @apply border-blue-700;
     @apply bg-gradient-to-r;
-    @apply from-blue-100;
+    @apply from-teal-100;
     @apply to-white;
     @apply text-black;
 }
@@ -81,9 +82,48 @@
     stroke: black;
 }
 
+.button-tambah{
+    @apply fixed;
+    @apply bottom-0;
+    @apply right-0;
+    @apply bg-gradient-to-tl from-blue-800 to-teal-500;
+    @apply text-white;
+    @apply px-4;
+    @apply py-3;
+    @apply rounded-full;
+    @apply shadow-md;
+    @apply flex;
+    @apply -translate-x-8;
+    @apply -translate-y-8;
+    @apply font-semibold;
+}
+
+.button-tambah:hover{
+    @apply transition-transform;
+    @apply duration-200;
+    @apply -translate-y-7;
+    @apply ease-in-out;
+}
+
+.button-tambah svg{
+    @apply mr-2;
+}
+
+.button-tambah:active{
+    @apply bg-gradient-to-tl from-blue-900 to-teal-600;
+}
+
 @media(max-width: 768px){
     .fixed-md{
         position: fixed;
+    }
+
+    .button-tambah span{
+        @apply hidden;
+    }
+
+    .button-tambah svg{
+        @apply mr-0;
     }
 
     .dropdown-sidebar{

@@ -4,15 +4,17 @@ import './App.css';
 import './styles/styles.css';
 import { Route, Routes } from 'react-router-dom';
 import 'firebase/database';
-import Login from './components/Auth/Login';
-import Dashboard from './components/Dashboard/admin/dashboard';
-import Layout from './components/container/Layout';
-import Register from './components/Auth/Register';
-import Perawat from './components/Dashboard/admin/perawat';
-import Pasien from './components/Dashboard/admin/pasien';
-import Detailperawat from './components/Dashboard/admin/detailperawat';
-import GCS from './components/Dashboard/admin/gcs';
-import RTS from './components/Dashboard/admin/rts';
+import Login from './pages/Auth/Login';
+import Register from './pages/Auth/Register';
+import AdminLayout from './components/Admin/AdminLayout';
+import AdminDashboard from './components/Admin/AdminDashboard';
+import AdminPerawatTable from './components/Admin/AdminPerawatTable';
+import PasienTable from './pages/PasienTable';
+import DetailPerawat from './pages/DetailPerawat';
+import Gcs from './pages/Gcs';
+import Rts from './pages/Rts';
+import PerawatLayout from './components/Perawat/PerawatLayout';
+import PerawatDashboard from './components/Perawat/PerawatDashboard';
 
 function App() {
   return (
@@ -21,24 +23,31 @@ function App() {
         <Routes>
           {/* Auth */}
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Register/>} />
 
           {/* Admin Dashboard */}
           {/* <Route path="/admin" element={<Layout />}>
             <Route path="/" element={<Dashboard />} />
           </Route> */}
-            <Route path="/admin/*" element={<Layout/>}>
-              <Route index element={<Dashboard />} />
-              <Route path="dashboard" element={<Dashboard />} /> 
-              <Route path="perawat" element={<Perawat />} /> 
-              <Route path="perawat/detail/" element={<Detailperawat />} /> 
-              <Route path="pasien" element={<Pasien />} />
-              <Route path="gcs" element={<GCS />} />
-              <Route path="rts" element={<RTS />} />
+            <Route path="/admin/*" element={<AdminLayout/>}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="dashboard" element={<AdminDashboard />} /> 
+              <Route path="perawat" element={<AdminPerawatTable />} /> 
+              <Route path="perawat/detail/" element={<DetailPerawat />} /> 
+              <Route path="pasien" element={<PasienTable />} />
+              <Route path="gcs" element={<Gcs />} />
+              <Route path="rts" element={<Rts />} />
             </Route>
           {/* <Route path="/admin/dashboard" element={<Layout><Dashboard /></Layout>} />
           <Route path="/admin/perawat" element={<Layout><Perawat /></Layout>} />
         <Route path="/admin/pasien" element={<Layout><Pasien /></Layout>} /> */}
+            <Route path="/perawat/*" element={<PerawatLayout/>}>
+                <Route index element={<PerawatDashboard />} />
+                <Route path="detail" element={<DetailPerawat />} /> 
+                <Route path="pasien" element={<PasienTable />} />
+                <Route path="gcs" element={<Gcs />} />
+                <Route path="rts" element={<Rts />} />
+            </Route>
 
 
           {/* Default */}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const RTS = () => {
+const Rts = () => {
     const [eye, setEye] = React.useState("");
     const [verbal, setVerbal] = React.useState("");
     const [motor, setMotor] = React.useState("");
@@ -138,4 +138,4 @@ const RTS = () => {
     );
 };
 
-export default RTS;
+export default Rts;

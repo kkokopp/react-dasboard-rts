@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 
-function Sidebar({sidebarOpen}){
+function AdminSidebar({sidebarOpen}){
     const [dropdownOpen, setDropdownOpen] = React.useState([false, false]);
     // const [activeLink, setActiveLink] = React.useState(false);
     const location = useLocation();
@@ -44,7 +44,7 @@ function Sidebar({sidebarOpen}){
                     </a>
                     <ul className="p-0 font-medium border-t border-gray-200 dark:border-gray-700" >
                         <li className="py-2 sidebar-li">
-                            <Link to="/admin/dashboard" type="button" className={`flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 group ${isDropdownActive(['/admin/dashboard'])}`}>
+                            <Link to="/admin/dashboard" type="button" className={`flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-teal-100 dark:hover:bg-gray-700 group ${isDropdownActive(['/admin/dashboard'])}`}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
@@ -58,7 +58,7 @@ function Sidebar({sidebarOpen}){
                             <DropdownItem key={index} setDropdownOpen={setDropdownOpen} dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} isDropdownActive={isDropdownActive} dropdown = {dropdown}index = {index}></DropdownItem>
                         ))}
                         <li className="py-2">
-                            <Link to="/" className="sidebar-link justify-center flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blu-50 dark:hover:bg-gray-700 group">
+                            <Link to="/" className="sidebar-link justify-center flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-teal-100 dark:hover:bg-gray-700 group">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                             </svg>
@@ -102,7 +102,7 @@ function DropdownItem({setDropdownOpen, dropdownOpen, toggleDropdown, isDropdown
     return(
         <li className="py-2 sidebar-li sub-items relative" key={index}
         ref={dropdownRef}>
-        <button type="button" className={`dropdown-toggle flex items-center justify-center w-full p-2 text-base text-gray-900 transition duration-300 rounded-lg group hover:bg-blue-50 dark:text-white dark:hover:bg-gray-700 ${isDropdownActive(dropdown.content.map(item => item.link))}`} 
+        <button type="button" className={`dropdown-toggle flex items-center justify-center w-full p-2 text-base text-gray-900 transition duration-300 rounded-lg group hover:bg-teal-100 dark:text-white dark:hover:bg-gray-700 ${isDropdownActive(dropdown.content.map(item => item.link))}`} 
         aria-controls="master-data" 
         data-target="master-data"
         data-dropdown-placement="right-end" 
@@ -120,7 +120,7 @@ function DropdownItem({setDropdownOpen, dropdownOpen, toggleDropdown, isDropdown
                 <ul id="master-data" className="translate-x-0 lg:static dropdown-sidebar transition-all duration-1000 ease-in-out">
                     {dropdown.content.map((item, itemIndex) => (
                         <li key={itemIndex}>
-                            <Link to={item.link} className="flex text-sm items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-50 dark:text-white dark:hover:bg-gray-700"
+                            <Link to={item.link} className="flex text-sm items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-teal-50 dark:text-white dark:hover:bg-gray-700"
                             onClick={(e) => e.stopPropagation()}>{item.page}</Link>
                         </li>
                     ))}
@@ -130,4 +130,4 @@ function DropdownItem({setDropdownOpen, dropdownOpen, toggleDropdown, isDropdown
     );
 }
 
-export default Sidebar;
+export default AdminSidebar;

@@ -1,14 +1,15 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 // import imageSrc from "../../../assets/images/profile.jpg";
-import imageSrc from "../../../assets/images/nurse.jpg";
+import imageSrc from "../../assets/images/nurse.jpg";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ref, get } from "firebase/database";
-import {db} from "../../../config/firebase";
-import Filter from "../../container/Filter";
+import {db} from "../../config/firebase";
+import Filter from "../Common/Filter";
+import ButtonTambah from "../Common/ButtonTambah";
 
-const Perawat = () =>{
+const AdminPerawatTable = () =>{
     const navigate = useNavigate();
     const [toggleModal] = useOutletContext();
     const [perawat, setPerawat] = useState([]);
@@ -70,6 +71,7 @@ const Perawat = () =>{
                     </div>
                 </div>
             </div>
+            <ButtonTambah/>
         </main>
     );
 }
@@ -81,7 +83,7 @@ const Table = ({filteredPerawat, navigate, toggleModal, imageSrc, displayCount})
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
-                                    <th scope="col" className="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3"> 
                                         ID
                                     </th>
                                     <th scope="col" className="px-6 py-3">
@@ -155,4 +157,4 @@ const Table = ({filteredPerawat, navigate, toggleModal, imageSrc, displayCount})
     );
 }
 
-export default Perawat;
+export default AdminPerawatTable;

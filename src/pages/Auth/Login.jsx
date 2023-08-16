@@ -56,7 +56,7 @@ function Login() {
                                   <input
                                     type="text"
                                     onChange={(e) => setUsername(e.target.value)}
-                                    className="peer block min-h-[auto] w-full rounded border-blue-800 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 input-transformed"
+                                    className="peer block min-h-[auto] w-full rounded border-blue-300 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 input-transformed"
                                     id="username"
                                     placeholder="Username" />
                                   <label
@@ -78,7 +78,7 @@ function Login() {
                                   <input
                                     type="password"
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className="peer block min-h-[auto] w-full rounded border-blue-800 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 input-transformed"
+                                    className="peer block min-h-[auto] w-full rounded border-blue-300 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 input-transformed"
                                     id="password"
                                     placeholder="Password" />
                                   <label
@@ -91,7 +91,7 @@ function Login() {
   
                           {/* <!-- Select Role --> */}
                           <div className="relative mb-4 focus:border-blue-900">
-                              <select data-te-select-init className="rounded-lg w-full"
+                              <select data-te-select-init className="rounded-lg w-full border-blue-300"
                               onChange={(e) => setRole(e.target.value)}>
                                 <option value="">Pilih akun..</option>
                                 <option value="1">Admin</option>
@@ -103,7 +103,7 @@ function Login() {
                           <div className="mb-12 pb-1 pt-1 text-center">
                             <button
                                 onClick={handleSubmit}
-                              className="mb-3 inline-block w-full rounded-lg px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] btn-primary"
+                              className="mb-3 inline-block w-full rounded-lg px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] bg-gradient-to-tl from-blue-800 to-teal-400"
                               type="button"
                               data-te-ripple-init
                               data-te-ripple-color="light">
@@ -133,7 +133,7 @@ function Login() {
       
                   {/* <!-- Right column container with background and description--> */}
                   <div
-                    className="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none login-color">
+                    className="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none bg-gradient-to-tl from-blue-800 to-teal-400">
                     <div className="px-4 py-6 text-white md:mx-6 md:p-12">
                       <h4 className="mb-6 text-xl font-semibold">
                         We are more than just a company

@@ -2,20 +2,21 @@ import React from "react";
 // import { Link } from "react-router-dom";
 // import imageSrc from "../../../assets/images/profile.jpg";
 // import imageSrc from "../../../assets/images/nurse.jpg";
-import {db} from "../../../config/firebase";
+import {db} from "../config/firebase";
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { ref, get } from "firebase/database";
-import Filter from "../../container/Filter";
+import Filter from "../components/Common/Filter";
+import ButtonTambah from "../components/Common/ButtonTambah";
 
-function Pasien(){
+function PasienTable(){
 
     const [toggleModal] = useOutletContext();
     const [pasien, setPasien] = useState([]);
     const [filteredPasien, setFilteredPasien] = useState([]);
     const [displayCount, setDisplayCount] = useState(pasien.length);
 
-    console.log(pasien)
+    // console.log(pasien)
 
     useEffect(() => {
         const pasienRef = ref(db, "pasien");
@@ -138,12 +139,12 @@ function Pasien(){
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                 </div>
             </div>
+            <ButtonTambah/>
         </main>
     );
 }
 
-export default Pasien;
+export default PasienTable;
