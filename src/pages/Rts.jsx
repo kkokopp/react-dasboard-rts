@@ -30,10 +30,10 @@ const Rts = () => {
                     <h1 className=" text-3xl font-bold">Perhitungan Revised Trauma Score (RTS)</h1>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-5">
-                    <div className="flex-grow border-0 lg:border-r-2 pr-0 lg:pr-5">                
+                    <div className="flex-grow border-0 lg:border-r-2 border-blue-300 pr-0 lg:pr-5">                
                         <div className="flex flex-col py-8">                
                             <h1 className=" text-xl font-semibold pb-5">Glasgow Coma Score (Points)</h1>
-                            <select className="bg-gray-50 border font-medium border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setEye(e.target.value)}>
+                            <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setEye(e.target.value)}>
                                 <option value="">Semua</option>
                                 <option value="4">13 - 15</option>
                                 <option value="3">9 - 12</option>
@@ -44,7 +44,7 @@ const Rts = () => {
                         </div>
                         <div className="flex flex-col pb-8">   
                             <h1 className=" text-xl font-semibold pb-5">Systolic Blood Pressure (mm Hg):</h1>             
-                            <select className="bg-gray-50 border font-medium border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setVerbal(e.target.value)}>
+                            <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setVerbal(e.target.value)}>
                                 <option value="">Semua</option>
                                 <option value="4">&gt;89</option>
                                 <option value="3">76 - 89</option>
@@ -55,7 +55,7 @@ const Rts = () => {
                         </div>
                         <div className="flex flex-col pb-8">   
                             <h1 className=" text-xl font-semibold pb-5">Respiratory Rate (breaths/min):</h1>                  
-                            <select className="bg-gray-50 border font-medium border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setMotor(e.target.value)}>
+                            <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setMotor(e.target.value)}>
                                 <option value="">Semua</option>
                                 <option value="3">&gt;29</option>
                                 <option value="4">10 - 29</option>

@@ -35,7 +35,7 @@ const Gcs = () => {
                         <div className="flex-grow border-0 lg:border-r-2 border-blue-300 pr-0 lg:pr-5">                
                             <div className="flex flex-col py-8">                
                                 <h1 className=" text-xl font-semibold pb-5">Buka Mata (Eye)</h1>
-                                <select className="bg-blue-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setEye(e.target.value)}>
+                                <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setEye(e.target.value)}>
                                     <option value="">Semua</option>
                                     <option value="4">Spontan (4)</option>
                                     <option value="3">Berdasarkan perintah verbal (3)</option>
@@ -45,7 +45,7 @@ const Gcs = () => {
                             </div>
                             <div className="flex flex-col pb-8">   
                                 <h1 className=" text-xl font-semibold pb-5">Respon Verbal</h1>             
-                                <select className="bg-blue-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setVerbal(e.target.value)}>
+                                <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setVerbal(e.target.value)}>
                                     <option value="">Semua</option>
                                     <option value="5">Orientasi baik (5)</option>
                                     <option value="4">Percakapan kacau (4)</option>
@@ -56,7 +56,7 @@ const Gcs = () => {
                             </div>
                             <div className="flex flex-col pb-8">   
                                 <h1 className=" text-xl font-semibold pb-5">Respon Motorik</h1>                  
-                                <select className="bg-blue-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setMotor(e.target.value)}>
+                                <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setMotor(e.target.value)}>
                                     <option value="">Semua</option>
                                     <option value="6">Menurut perintah (6)</option>
                                     <option value="5">Melokalisir rangsang nyeri (5)</option>
