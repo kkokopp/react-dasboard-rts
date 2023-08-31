@@ -11,42 +11,49 @@ import AdminDashboard from './components/Admin/AdminDashboard';
 import AdminPerawatTable from './components/Admin/AdminPerawatTable';
 import PasienTable from './pages/PasienTable';
 import DetailPerawat from './pages/DetailPerawat';
-import Gcs from './pages/Gcs';
-import Rts from './pages/Rts';
 import PerawatLayout from './components/Perawat/PerawatLayout';
 import PerawatDashboard from './components/Perawat/PerawatDashboard';
+import Perhitungan from './pages/Perhitungan';
+import Rekomendasi from './pages/Rekomendasi';
+
+const AdminRoute = () => (
+  <>
+    <Route index element={<AdminDashboard />} />
+    <Route path="dashboard" element={<AdminDashboard />} /> 
+    <Route path="perawat" element={<AdminPerawatTable />} /> 
+    <Route path="perawat/detail/" element={<DetailPerawat />} /> 
+    <Route path="pasien" element={<PasienTable />} />
+    <Route path="perhitungan" element={<Perhitungan />} />
+    <Route path="rekomendasi" element={<Rekomendasi />} />
+  </>
+);
+
+const PerawatRoute = () => (
+  <>
+    <Route index element={<PerawatDashboard />} />
+    <Route path="detail" element={<DetailPerawat />} /> 
+    <Route path="pasien" element={<PasienTable />} />
+    <Route path="perhitungan" element={<Perhitungan />} />
+    <Route path="rekomendasi" element={<Rekomendasi />} />
+  </>
+);
 
 function App() {
   return (
-    // <h1>hello world</h1>
 
         <Routes>
           {/* Auth */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register/>} />
 
-          {/* Admin Dashboard */}
-          {/* <Route path="/admin" element={<Layout />}>
-            <Route path="/" element={<Dashboard />} />
-          </Route> */}
+          {/* Admin Route */}
             <Route path="/admin/*" element={<AdminLayout/>}>
-              <Route index element={<AdminDashboard />} />
-              <Route path="dashboard" element={<AdminDashboard />} /> 
-              <Route path="perawat" element={<AdminPerawatTable />} /> 
-              <Route path="perawat/detail/" element={<DetailPerawat />} /> 
-              <Route path="pasien" element={<PasienTable />} />
-              <Route path="gcs" element={<Gcs />} />
-              <Route path="rts" element={<Rts />} />
+              {AdminRoute()}
             </Route>
-          {/* <Route path="/admin/dashboard" element={<Layout><Dashboard /></Layout>} />
-          <Route path="/admin/perawat" element={<Layout><Perawat /></Layout>} />
-        <Route path="/admin/pasien" element={<Layout><Pasien /></Layout>} /> */}
+
+            {/* Perawat Route */}
             <Route path="/perawat/*" element={<PerawatLayout/>}>
-                <Route index element={<PerawatDashboard />} />
-                <Route path="detail" element={<DetailPerawat />} /> 
-                <Route path="pasien" element={<PasienTable />} />
-                <Route path="gcs" element={<Gcs />} />
-                <Route path="rts" element={<Rts />} />
+              {PerawatRoute()}
             </Route>
 
 

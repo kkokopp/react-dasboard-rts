@@ -26,13 +26,12 @@ const Gcs = () => {
         }
     }
     return (
-        <main className="bg-white flex-grow lg:min-h-max rounded-lg shadow-sm" id="mainContent">
-                <div className="flex flex-col gap-4 p-5">
+            <div className="flex flex-col gap-4 p-5 bg-white shadow-sm rounded-lg">
                     <div className="flex">                
-                        <h1 className=" text-3xl font-bold">Perhitungan Glasgow Coma Score (GCS)</h1>
+                        <h1 className=" text-2xl font-bold">Hitung Glasgow Coma Score (GCS)</h1>
                     </div>
                     <div className="flex flex-col lg:flex-row gap-5">
-                        <div className="flex-grow border-0 lg:border-r-2 border-blue-300 pr-0 lg:pr-5">                
+                        <div className="lg:w-1/2">                
                             <div className="flex flex-col py-8">                
                                 <h1 className=" text-xl font-semibold pb-5">Buka Mata (Eye)</h1>
                                 <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setEye(e.target.value)}>
@@ -171,8 +170,7 @@ const Gcs = () => {
                             </div>
                         </div>                
                     </div>
-                </div>
-        </main>
+            </div>
     );
 };
 

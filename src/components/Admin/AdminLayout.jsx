@@ -24,6 +24,7 @@ function AdminLayout({children}){
         <div className="w-full min-h-screen bg-gray-100 overflow-x-hidden overscroll-x-none">
         {/* <!-- Sidebar component --> */}
         <AdminSidebar sidebarOpen={sidebarOpen}/>
+        {/* <AdminSidebar sidebarOpen={sidebarOpen}/> */}
         <div id="right-content" className={`flex gap-4 py-4 min-h-screen md:ml-64 right-content pr-4 flex-col flex-grow margin-transition ${sidebarOpen ? 'ml-24': ''}`}>
             {/* <!-- Navigation bar component --> */}
             <nav id="navbarContainer" className="rounded-lg p-4 bg-white shadow-sm">
