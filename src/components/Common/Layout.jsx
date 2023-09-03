@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
-import PerawatSidebar from "./PerawatSidebar";
-import Navigation from "../Common/Navigation";
+import Navigation from "./Navigation";
+import DeleteModal from "./DeleteModal";
 import { Outlet } from "react-router-dom";
 import 'flowbite';
-import DeleteModal from "../Common/DeleteModal";
+import Sidebar from "./Sidebar";
 
-function PerawatLayout({children}){
+function Layout({children}){
     const [sidebarOpen, setSidebarOpen] = React.useState(false);
     const [isModalOpen, setIsModalOpen ] = useState(false);
     const [deleteItem, setDeleteItem] = useState(null);
@@ -23,7 +23,8 @@ function PerawatLayout({children}){
     return(
         <div className="w-full min-h-screen bg-gray-100 overflow-x-hidden overscroll-x-none">
         {/* <!-- Sidebar component --> */}
-        <PerawatSidebar sidebarOpen={sidebarOpen}/>
+        <Sidebar sidebarOpen={sidebarOpen}/>
+        {/* <AdminSidebar sidebarOpen={sidebarOpen}/> */}
         <div id="right-content" className={`flex gap-4 py-4 min-h-screen md:ml-64 right-content pr-4 flex-col flex-grow margin-transition ${sidebarOpen ? 'ml-24': ''}`}>
             {/* <!-- Navigation bar component --> */}
             <nav id="navbarContainer" className="rounded-lg p-4 bg-white shadow-sm">
@@ -38,4 +39,4 @@ function PerawatLayout({children}){
     );
 }
 
-export default PerawatLayout;
+export default Layout;

@@ -2,9 +2,9 @@ import React from "react";
 // import { Link } from "react-router-dom";
 // import Sidebar from "../../container/sidebar";
 // import Navigation from "../../container/navigation";
-import imageSrc from "../../assets/images/nurse.jpg";
+import imageSrc from "../assets/images/nurse.jpg";
 
-function AdminDashboard(){
+function Dashboard(){
     return(
     <main className=" h-screen rounded-lg shadow-sm" id="mainContent">
         <div className="flex flex-col gap-4">
@@ -22,4 +22,4 @@ function AdminDashboard(){
     );
 }
 
-export default AdminDashboard;
+export default Dashboard;

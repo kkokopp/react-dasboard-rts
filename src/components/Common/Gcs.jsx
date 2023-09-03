@@ -44,7 +44,7 @@ const Gcs = () => {
                             </div>
                             <div className="flex flex-col pb-8">   
                                 <h1 className=" text-xl font-semibold pb-5">Respon Verbal</h1>             
-                                <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setVerbal(e.target.value)}>
+                                <select className="bg-teal-50 border font-medium border-blue-400 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => setVerbal(e.target.value)} required>
                                     <option value="">Semua</option>
                                     <option value="5">Orientasi baik (5)</option>
                                     <option value="4">Percakapan kacau (4)</option>

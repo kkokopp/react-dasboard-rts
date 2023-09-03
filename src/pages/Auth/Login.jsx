@@ -15,10 +15,8 @@ function Login() {
     const handleSubmit = (event) => {
         event.preventDefault();
         // alert(`USername: ${username} Password: ${password} Role: ${role}`);
-        if(username === "admin" && password === "admin" && role === "1") {
-            navigate("/admin/dashboard");
-        }else if(username === "perawat" && password === "perawat" && role === "2") {
-            navigate("/perawat");
+        if(username === "admin" && password === "admin") {
+            navigate("/dashboard");
         }
     };
 
@@ -90,14 +88,14 @@ function Login() {
                           </div>
   
                           {/* <!-- Select Role --> */}
-                          <div className="relative mb-4 focus:border-blue-900">
+                          {/* <div className="relative mb-4 focus:border-blue-900">
                               <select data-te-select-init className="rounded-lg w-full border-blue-300"
                               onChange={(e) => setRole(e.target.value)}>
                                 <option value="">Pilih akun..</option>
                                 <option value="1">Admin</option>
                                 <option value="2">Perawat</option>
                                 </select>
-                          </div>
+                          </div> */}
         
                           {/* <!--Submit button--> */}
                           <div className="mb-12 pb-1 pt-1 text-center">
