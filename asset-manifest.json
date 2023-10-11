@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-dasboard-rts/static/css/main.2d013234.css",
-    "main.js": "/react-dasboard-rts/static/js/main.a57990d0.js",
+    "main.css": "/react-dasboard-rts/static/css/main.33814aad.css",
+    "main.js": "/react-dasboard-rts/static/js/main.dc6b92ff.js",
     "static/js/27.261dac7d.chunk.js": "/react-dasboard-rts/static/js/27.261dac7d.chunk.js",
     "static/media/nurse.jpg": "/react-dasboard-rts/static/media/nurse.1b5edbca83323ec57797.jpg",
     "static/media/landing.jpg": "/react-dasboard-rts/static/media/landing.b219eca00a2530c47278.jpg",
     "index.html": "/react-dasboard-rts/index.html"
   },
   "entrypoints": [
-    "static/css/main.2d013234.css",
-    "static/js/main.a57990d0.js"
+    "static/css/main.33814aad.css",
+    "static/js/main.dc6b92ff.js"
   ]
 }
