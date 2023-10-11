@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-dasboard-rts/static/css/main.e848a469.css",
-    "main.js": "/react-dasboard-rts/static/js/main.ea13032a.js",
+    "main.js": "/react-dasboard-rts/static/js/main.18560786.js",
     "static/js/27.261dac7d.chunk.js": "/react-dasboard-rts/static/js/27.261dac7d.chunk.js",
     "static/media/nurse.jpg": "/react-dasboard-rts/static/media/nurse.1b5edbca83323ec57797.jpg",
     "static/media/landing.jpg": "/react-dasboard-rts/static/media/landing.b219eca00a2530c47278.jpg",
@@ -9,6 +9,6 @@
   },
   "entrypoints": [
     "static/css/main.e848a469.css",
-    "static/js/main.ea13032a.js"
+    "static/js/main.18560786.js"
   ]
 }
